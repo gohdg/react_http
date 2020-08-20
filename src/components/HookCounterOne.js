@@ -5,9 +5,9 @@ function HookCounterOne() {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    console.log("updating title");
+    console.log("useEffect - Updating document title");
     document.title = `You clicked ${count} times`;
-  }, [count]);
+  }, [count]); // second paramter, we need to specify props or state we need to watch for
   return (
     <div>
       <input
